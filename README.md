@@ -43,7 +43,7 @@ SELECT *FROM Customers where customerName like "%market%"
  ("The Shire", "Bilbo Baggins", "1 Hobbit-Hole", "Bag End", "111", "Middle Earth")
 
 - update _Bilbo Baggins_ record so that the postal code changes to _"11122"_.
-UPDATE CustomersSET postalCode = "11122" WHERE CustomerID = 92;
+UPDATE Customers SET postalCode = "11122" WHERE CustomerID = 92;
 
 
 **Clicking the `Restore Database` button in the page will repopulate the database with the original data and discard all changes you have made**.
