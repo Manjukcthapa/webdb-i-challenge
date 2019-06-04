@@ -8,7 +8,6 @@ server.use(express.json())
 
 server.post("/api/budgets", (req, res) => {
     const budget = req.body;
-    console.log(budget)
     db.add(budget)
       .then(result => {
         res.status(201).json(result);
@@ -23,8 +22,8 @@ server.post("/api/budgets", (req, res) => {
 
 server.get("/api/budgets", (req, res) => {
     db.find()
-    .then(results =>{
-        res.status(200).json(results);
+    .then(result =>{
+        res.status(200).json(result);
     })
     .catch(err => {
         res.status(500).json({err: "cannot get the data"})
@@ -59,8 +58,6 @@ server.get("/api/budgets/:id", (req, res) => {
         });
       });
   });
-
-
 
   server.put("/api/budgets/:id", (req, res) => {
     const id = req.params.id;
